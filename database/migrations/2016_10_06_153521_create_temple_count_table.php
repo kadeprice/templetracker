@@ -15,6 +15,7 @@ class CreateTempleCountTable extends Migration
         Schema::create('temple_count', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('count');
+            $table->integer('sex');
             $table->integer('member_id')->unsigned();
             $table->foreign('member_id')->references('id')->on('member');
             $table->timestamps();
