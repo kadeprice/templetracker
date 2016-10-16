@@ -66,6 +66,9 @@
                 <div class="title m-b-md">
                     Goal 1,000 names<br/> 10 Temples<br/> 1 Weekend
                 </div>
+                <div>
+                    Total Count: {{ $count }}
+                </div>
 
 
             </div>
