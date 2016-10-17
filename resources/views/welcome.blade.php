@@ -13,6 +13,11 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                background: url('./images/{{$background}}') no-repeat fixed center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
             }
 
             .full-height {

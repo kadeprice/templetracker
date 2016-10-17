@@ -53,15 +53,12 @@ class HomeController extends Controller {
 
         $this->makeCharts();
 
+        $background = ['Brigham.png', 'Brigham2.png', 'Brigham3.png'];
+        $rand = array_rand($background);
         $data = [
-            'total'         => $this->total,
-            'elders'        => $this->elders,
-            'highPriests'   => $this->highPriests,
-            'reliefSociety' => $this->reliefSociety,
-            'primary'       => $this->primary,
-            'youngMens'     => $this->youngMens,
-            'youngWomens'   => $this->youngWomens
+            'background' => $background[$rand],
         ];
+
 
         return view('welcome', $data);
     }
