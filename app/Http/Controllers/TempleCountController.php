@@ -64,14 +64,16 @@ class TempleCountController extends Controller
             'sex' => 'required',
             'count' => 'required|numeric'
         ]);
+        $member = $this->member->find($request->member);
 
         $this->templeCount->create([
             'count' => $request->count,
             'member_id' => $request->member,
+            'auxiliary_id' => $member->auxiliary_id,
             'sex' => $request->sex
         ]);
 
-        $request->session()->flash('status', "$request->count cards have been added!");
+        $request->session()->flash('status', "$request->count cards have been added for $member->name!");
         return redirect()->route('temple-count.create');
     }
 

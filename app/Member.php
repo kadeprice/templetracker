@@ -17,7 +17,7 @@ class Member extends Model
 
     public function getDropdown() {
         $dropdown = [];
-        foreach ($this->all() as $member){
+        foreach ($this->orderBy('name')->get() as $member){
             $dropdown[$member->id] = $member->name;
         }
         return $dropdown;

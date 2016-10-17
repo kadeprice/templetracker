@@ -58,16 +58,53 @@
             }
         </style>
 
-        <div class="flex-center position-ref full-height">
-
-
+        <div class="flex-center position-ref ">
 
             <div class="content">
-                <div class="title m-b-md">
-                    Goal 1,000 names<br/> 10 Temples<br/> 1 Weekend
-                </div>
-                <div>
-                    Total Count: {{ $count }}
+                <div class="text-info">
+                    <table>
+                        <tr>
+                            <td colspan="3" align="center">
+                                <div id="total_chart"></div>
+                                {!! Lava::render('GaugeChart', 'Total', 'total_chart') !!}
+                            </td>
+                        </tr>
+                        <td colspan="3">
+                            <div class="title m-b-md">
+                                Goal 1,000 names<br/> 10 Temples<br/> 1 Weekend
+                            </div>
+
+                        </td>
+                        <tr>
+                            <td>
+                                <div id="relief_society_chart" class="pull-left"></div>
+                                {!! Lava::render('GaugeChart', 'Relief', 'relief_society_chart') !!}
+                            </td>
+                            <td>
+                                <div id="elders_priests_chart" class="push-right"></div>
+                                {!! Lava::render('GaugeChart', 'Elders', 'elders_priests_chart') !!}
+                            </td>
+                            <td>
+                                <div id="youth_chart"></div>
+                                {!! Lava::render('GaugeChart', 'Youth', 'youth_chart') !!}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+
+                                <div id="male_female_chart"></div>
+                                {!! Lava::render('PieChart', 'Sex', 'male_female_chart') !!}
+                            </td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                    </table>
+
+
+
+
+
                 </div>
 
 
