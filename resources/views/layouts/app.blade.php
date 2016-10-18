@@ -71,6 +71,12 @@
                                         </form>
                                     </li>
                                     <li>
+                                        {!! link_to_route('temple-count.create', $title = 'Add Cards', $parameters = [], $attributes = []) !!}
+                                    </li>
+                                    <li>
+                                        {!! link_to_route('member.create', $title = 'Add Member', $parameters = [], $attributes = []) !!}
+                                    </li>
+                                    <li>
                                         <a href="{{ url('/home') }}">Dashboard</a>
                                     </li>
                                 </ul>

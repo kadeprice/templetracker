@@ -25,7 +25,7 @@
                         @endif
                         {!! Form::open(['route' => 'member.store']) !!}
                         <div class="form-group">
-                            {!! Form::label('name', 'Name') !!}
+                            {!! Form::label('name', 'Name') !!} {!! link_to_route('temple-count.create', $title = 'Add Cards', $parameters = [], $attributes = ['class' => 'btn btn-info btn-xs']) !!}
                             {!! Form::text('name', null, ['class' => 'form-control']) !!}
                         </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Auxiliary;
 use App\Member;
+use Doctrine\DBAL\Query\QueryException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -65,10 +66,14 @@ class MemberController extends Controller
             'auxiliary' => 'required'
         ]);
 
-        $this->member->create([
-           'name' => $request->name,
-            'auxiliary_id' => $request->auxiliary
-        ]);
+        try {
+            $this->member->create([
+                'name'         => $request->name,
+                'auxiliary_id' => $request->auxiliary
+            ]);
+        }catch (\Exception $e){
+            return redirect()->back()->withInput()->withErrors(['This member must already be in the system.']);
+        }
 
         $request->session()->flash('status', "$request->name has been added!");
         return redirect()->route('member.create');
