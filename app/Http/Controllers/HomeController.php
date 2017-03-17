@@ -71,14 +71,14 @@ class HomeController extends Controller {
 
         \Lava::GaugeChart('Total', $totalCart, [
             'min'        => 0,
-            'max'        => 1000,
+            'max'        => 600,
             'height'     => 300,
             'greenFrom'  => 0,
-            'greenTo'    => 599,
-            'yellowFrom' => 600,
-            'yellowTo'   => 799,
-            'redFrom'    => 800,
-            'redTo'      => 1000,
+            'greenTo'    => 299,
+            'yellowFrom' => 300,
+            'yellowTo'   => 499,
+            'redFrom'    => 500,
+            'redTo'      => 600,
             'majorTicks' => [
                 'Start',
                 'Finish'
@@ -93,16 +93,16 @@ class HomeController extends Controller {
 
         \Lava::GaugeChart('Relief', $reliefChart, [
             'min'        => 0,
-            'max'        => 300,
+            'max'        => 200,
             'greenFrom'  => 0,
-            'greenTo'    => 199,
-            'yellowFrom' => 200,
-            'yellowTo'   => 274,
-            'redFrom'    => 275,
-            'redTo'      => 300,
+            'greenTo'    => 99,
+            'yellowFrom' => 100,
+            'yellowTo'   => 174,
+            'redFrom'    => 175,
+            'redTo'      => 200,
             'majorTicks' => [
                 '0',
-                '300'
+                '200'
             ]
         ]);
 
@@ -114,16 +114,16 @@ class HomeController extends Controller {
 
         \Lava::GaugeChart('Elders', $eldersChart, [
             'min'        => 0,
-            'max'        => 100,
+            'max'        => 10,
             'greenFrom'  => 0,
-            'greenTo'    => 69,
-            'yellowFrom' => 70,
-            'yellowTo'   => 89,
-            'redFrom'    => 90,
-            'redTo'      => 100,
+            'greenTo'    => 6.9,
+            'yellowFrom' => 7,
+            'yellowTo'   => 8.9,
+            'redFrom'    => 9,
+            'redTo'      => 10,
             'majorTicks' => [
                 '0',
-                '100'
+                '10'
             ]
         ]);
 
@@ -134,16 +134,16 @@ class HomeController extends Controller {
 
         \Lava::GaugeChart('Youth', $youthChart, [
             'min'        => 0,
-            'max'        => 200,
+            'max'        => 180,
             'greenFrom'  => 0,
-            'greenTo'    => 149,
-            'yellowFrom' => 150,
-            'yellowTo'   => 169,
-            'redFrom'    => 170,
-            'redTo'      => 200,
+            'greenTo'    => 139,
+            'yellowFrom' => 140,
+            'yellowTo'   => 159,
+            'redFrom'    => 160,
+            'redTo'      => 180,
             'majorTicks' => [
                 '0',
-                '200'
+                '180'
             ]
         ]);
 

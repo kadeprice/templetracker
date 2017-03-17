@@ -76,7 +76,7 @@
                         </tr>
                         <td colspan="3">
                             <div class="title m-b-md">
-                                Goal 1,000 names<br/> 10 Temples<br/> 1 Weekend
+                                Goal 600 names<br/> 6 Temples<br/> 1 Weekend
                             </div>
 
                         </td>
